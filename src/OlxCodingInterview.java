@@ -5,20 +5,6 @@ import java.util.List;
 public class OlxCodingInterview {
 
     public static List<String> run(char[][] keyboard, String reportedPin) {
-//        List<String> possiblePin = new ArrayList();
-
-//        possiblePin.add(reportedPin);
-
-//        char[] chars = reportedPin.toCharArray();
-//
-//        for (int i = 0; i < chars.length; i++) {
-//            List<Character> variations = getVariations(keyboard, chars[i]);
-//            for (char ch : variations) {
-//                char[] copy = Arrays.copyOf(chars, chars.length);
-//                copy[i] = ch;
-//                possiblePin.add(String.valueOf(copy));
-//            }
-//        }
 
         return buildPossiblePin(keyboard, reportedPin, 0);
     }
@@ -32,7 +18,7 @@ public class OlxCodingInterview {
             List<Character> variations = getVariations(keyboard, reportedPin.charAt(i));
             ArrayList<String> values = new ArrayList<>();
             for (Character ch : variations) {
-                values.add(ch + "");
+                values.add(Character.toString(ch));
             }
             return values;
         }

@@ -13,5 +13,6 @@ public class OlxCodingInterviewTest {
 
         List<String> possiblePin = OlxCodingInterview.run(kb, "135");
         System.out.println(possiblePin);
+        System.out.println(possiblePin.size());
     }
 }
